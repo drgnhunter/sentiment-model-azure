@@ -1,0 +1,25 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: blue
+endpoint_name: sentiment-analysis-endpoint
+model: azureml:sentiment-model:1
+code_configuration:
+  code: .
+  scoring_script: score.py
+environment:
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04:latest
+  conda_file: environment.yml
+instance_type: Standard_DS2_v2
+instance_count: 1
+#
+# --- THIS SECTION IS CORRECTED ---
+#
+readiness_probe:
+  initial_delay: 90
+  period: 10
+  failure_threshold: 20
+  timeout: 10
+liveness_probe:
+  initial_delay: 90
+  period: 10
+  failure_threshold: 20
+  timeout: 10

@@ -1,0 +1,22 @@
+{
+  "texts": [
+    "I love this product, it's amazing!",
+    "This is the worst experience ever.",
+    "What a fantastic day!",
+    "I am so angry and frustrated.",
+    "The food was delicious and wonderful.",
+    "I hate waiting in line, it's terrible.",
+    "Service was excellent and the staff was so friendly.",
+    "The movie was boring and slow."
+  ],
+  "labels": [
+    "positive",
+    "negative",
+    "positive",
+    "negative",
+    "positive",
+    "negative",
+    "positive",
+    "negative"
+  ]
+}

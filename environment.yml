@@ -1,0 +1,13 @@
+name: model-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - azureml-inference-server-http  # <-- THIS IS THE FIX
+    - joblib==1.5.2
+    - numpy==2.0.2
+    - scikit-learn==1.6.1
+    - scipy==1.13.1
+    - threadpoolctl==3.6.0
